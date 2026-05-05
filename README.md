@@ -9,7 +9,7 @@ Open your browser's DevTools, head to the **Network** tab, and watch how many re
 | Route | Description |
 |---|---|
 | `/thundering-herd-problem` | Two independent fetches for the same resource |
-| `/single-flight` | Both callers share a single in-flight request |
+| `/single-flight-solution` | Both callers share a single in-flight request |
 
 ## ⚠️ This is not copy-paste code
 
