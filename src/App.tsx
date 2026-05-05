@@ -16,9 +16,9 @@ const router = createBrowserRouter([
         <div>
           <h1>Home</h1>
 
-          <Link to="/thundering-herd-problem">Thundering Herd Problem</Link>
+          <Link relative="path" to="/thundering-herd-problem">Thundering Herd Problem</Link>
           <br />
-          <Link to="/single-flight">Single Flight Solution</Link>
+          <Link relative="path" to="/single-flight-solution">Single Flight Solution</Link>
         </div>
       )
     },
@@ -61,13 +61,13 @@ const router = createBrowserRouter([
             <Card pokemonPromise={pokemonPromiseB} />
           </Suspense>
 
-          <Link to="/">Go Back</Link>
+          <Link relative="path" to="..">Go Back</Link>
         </div>
       )
     }
   },
   {
-    path: "/single-flight",
+    path: "/single-flight-solution",
     loader: async () => {
       const singleFlight = createSingleFlight()
 
@@ -110,12 +110,12 @@ const router = createBrowserRouter([
             <Card pokemonPromise={pokemonPromiseB} />
           </Suspense>
 
-          <Link to="/">Go Back</Link>
+          <Link relative="path" to="..">Go Back</Link>
         </div>
       )
     }
   },
-]);
+], { basename: "/single-flight" });
 
 
 function App() {
